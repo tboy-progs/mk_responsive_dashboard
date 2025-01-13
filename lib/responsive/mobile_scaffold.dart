@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mk_responsive_dashboard/constants.dart';
 import 'package:mk_responsive_dashboard/util/my_box.dart';
+import 'package:mk_responsive_dashboard/util/my_tile.dart';
 
 class MobileScaffold extends StatefulWidget {
   const MobileScaffold({super.key});
@@ -35,6 +36,14 @@ class _MobileScaffoldState extends State<MobileScaffold> {
           ),
 
           // tiles below it
+          Expanded(
+            child: ListView.builder(
+              itemCount: 5,
+              itemBuilder: (context, index) {
+                return const MyTile();
+              },
+            ),
+          ),
         ],
       ),
     );
